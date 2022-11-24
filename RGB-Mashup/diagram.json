@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": -159.6,
+      "left": 97.68,
+      "attrs": { "common": "cathode" }
+    },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 3.2, "left": 288.8, "attrs": {} },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr2",
+      "top": 70.4,
+      "left": 288.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr3",
+      "top": 137.6,
+      "left": 288.8,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "rgb1:COM", "uno:GND.1", "black", [ "v0" ] ],
+    [ "rgb1:R", "uno:13", "red", [ "v23.78", "h18" ] ],
+    [ "rgb1:G", "uno:12", "green", [ "v14.47", "h8.51" ] ],
+    [ "rgb1:B", "uno:11", "blue", [ "v15.92", "h10.28" ] ],
+    [ "ldr3:GND", "uno:GND.3", "black", [ "h9.6", "v66.8", "h-288" ] ],
+    [ "ldr2:GND", "uno:GND.3", "black", [ "h19.2", "v143.6", "h-297.6" ] ],
+    [ "ldr1:GND", "uno:GND.3", "black", [ "h28.8", "v220.4", "h-307.2" ] ],
+    [ "ldr1:AO", "uno:A0", "red", [ "h38.4", "v210.5", "h-297.6" ] ],
+    [ "ldr2:AO", "uno:A1", "green", [ "h48", "v152.9", "h-288" ] ],
+    [ "ldr3:AO", "uno:A2", "blue", [ "h57.6", "v95.3", "h-288" ] ]
+  ]
+}
